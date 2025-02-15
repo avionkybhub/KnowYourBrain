@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVION KYB HUB - DMIT Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Avion Advisory (1).png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #222;
+            scroll-behavior: smooth;
+            background: #f5f7fa;
+        }
+        header {
+            background: #004AAD;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border-bottom: 4px solid #FFA500;
+            position: sticky;
+            top: 0;
+        }
+        header {
+            padding: 20px;
+        }
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .header-container img {
+            width: 80px;
+        }
+        .header-container p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        @media (min-width: 600px) {
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+            .header-container img {
+                width: 8%;
+            }
+            .header-container p {
+                font-size: 20px;
+                margin: 0;
+            }
+        }
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 15px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #FFA500;
+            transition: width 0.3s;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #004AAD, #007BFF);
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+        .hero p {
+            font-size: 1.5em;
+            animation: fadeInUp 1s ease;
+        }
+        @keyframes fadeInDown {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        .about, .services, .contact {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about h3, .services h3, .contact h3 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #004AAD;
+            border-bottom: 3px solid #FFA500;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .about p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+            margin-top: 20px;
+        }
+        .services .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .service-list .card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            flex: 1 1 300px;
+            padding: 30px;
+            transition: transform 0.3s ease;
+            border-top: 5px solid #FFA500;
+        }
+        .card:hover {
+            transform: translateY(-15px);
+        }
+        .card h4 {
+            color: #004AAD;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .card p {
+            color: #555;
+            line-height: 1.5;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact input, .contact textarea {
+            padding: 15px;
+            border: 2px solid #004AAD;
+            border-radius: 10px;
+            font-size: 1em;
+            background: #f0f0f0;
+        }
+        .contact button {
+            background: #004AAD;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .contact button:hover {
+            background: #003580;
+        }
+        footer {
+            background: #002D62;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .hero {
+            
+            background-size: 100%;
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            
+            color: white;
+            
+        }
+        .whatsapp-button {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #002d8f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .whatsapp-button img {
+            width: 20px;
+            margin-right: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="Avion Advisory.png" alt="Avion Advisory Logo">
+            <p>Your Trusted DMIT Service Provider</p>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>Unlock Your True Potential</h2>
+            <p>Discover the power of Dermatoglyphics Multiple Intelligence Test (DMIT) with us.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h3>About Us</h3>
+        <p>At AVION KYB HUB, we combine scientific research with modern technology to help individuals uncover their innate strengths through DMIT. Our personalized reports offer insights into learning styles, career aptitude, and personality traits, empowering our clients for lifelong success.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h3>Our Services</h3>
+        <div class="service-list">
+            <div class="card">
+                <h4>Child Development Analysis</h4>
+                <p>Understand your child's natural learning style to foster better educational outcomes.</p>
+            </div>
+            <div class="card">
+                <h4>Career Guidance</h4>
+                <p>Discover the career paths that align with your strengths and personality traits.</p>
+            </div>
+            <div class="card">
+                <h4>Relationship Compatibility</h4>
+                <p>Improve relationships through better understanding of personality dynamics.</p>
+            </div>
+            <div class="card">
+                <h4>Personal Development</h4>
+                <p>Gain self-awareness to enhance personal growth and emotional intelligence.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h3>Contact Us</h3>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <a href="https://wa.me/+919067111912" class="whatsapp-button" >
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon"> Connect with us on WhatsApp
+    </a>
+    <footer>
+        &copy; 2025 AVION KYB HUB. All rights reserved.
+    </footer>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for reaching out to us! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

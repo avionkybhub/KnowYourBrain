@@ -33,10 +33,53 @@
 
     <style>
         img {
-            width: 100%;         /* Makes the image take up the full width of its container */
-            height: auto;        /* Maintains the aspect ratio */
-            max-width: 100%;     /* Prevents the image from stretching beyond its original width */
-        }
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Prevents stretching */
+    display: block;
+}
+        .container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-section, .text-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 300px; /* Prevents content from shrinking too much */
+}
+
+.text-section h1 {
+    font-size: 2rem; /* Adjusts based on screen size */
+}
+
+.text-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+    
+    .image-section, .text-section {
+        min-width: 100%; /* Full width on mobile */
+    }
+
+    .text-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-section p {
+        font-size: 1rem;
+    }
+}
+
+
         * {
             margin: 0;
             padding: 0;

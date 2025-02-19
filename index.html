@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="Avion Advisory (1).png">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Include SweetAlert2 from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script type="text/javascript">
     window.onload = function() {
@@ -45,7 +46,7 @@
             font-family: 'Poppins', sans-serif;
             color: #222;
             scroll-behavior: smooth;
-            background: #f5f7fa;
+            background: #ffffff;
         }
         header {
             background: #004AAD;
@@ -264,11 +265,59 @@
             width: 20px;
             margin-right: 10px;
         }
-        
+        footer {
+    background: rgb(0, 21, 114);
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;  /* Adjust size */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);  /* Hover effect */
+}
+
+        .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-section, .text-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+/* Alternating layout */
+.container:nth-of-type(odd) {
+    flex-direction: row;
+}
+
+.container:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+
     </style>
     
 </head>
 <body>
+    
     <header>
         <div class="header-container">
             <img src="Avion Advisory.png" alt="Avion Advisory Logo">
@@ -280,9 +329,6 @@
             </nav>
         </div>
     </header>
-    <img src="best.jpg" alt="Presentation Image" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-
-
 
     <section class="hero">
         <div>
@@ -294,8 +340,63 @@
     <section id="about" class="about">
         <h3>About Us</h3>
         <p>At AVION KYB HUB, we combine scientific research with modern technology to help individuals uncover their innate strengths through DMIT. Our personalized reports offer insights into learning styles, career aptitude, and personality traits, empowering our clients for lifelong success.</p>
-    </section>
+        <br><br>
+        <br><br>
     <img src="Brain & FIngerprint correlation.png">
+    </section>
+    <section id="hero" class="container">
+        <div class="image-section">
+            <img src="2020-11-12-11-00-312020-09-03-10-48-46revised-banner-of-toddler-2-9-2020.webp" alt="DMIT Illustration">
+        </div>
+        <div class="text-section">
+            <h1>DMIT Test for Toddlers in Pune</h1>
+            <p>U.S.    Patented DMIT Test for toddlers is commonly used for infants and toddlers. 60% of brain growth takes place between infancy and toddlerhood, which spans the ages of 0–2 years and 3-5 years, respectively. Early identification of appropriate learning styles and natural qualities can optimise successful growth by 80%, according to several medical and statistical research.
+
+                Choosing the appropriate action for their babies and toddlers who are speech-impaired presents difficulties for parents. Everyone wants to see their child succeed but it's simpler when they have guidance. Toddlers learn everything. The U.S. Patented DMIT Test from Brainwonders maps a child's inborn profile using biometric analysis, offering direction throughout this crucial learning phase. </p>
+        </div>
+    </section>
+    
+    <section id="about" class="container">
+        <div class="text-section">
+            <h1>DMIT Test for Children in Pune</h2>
+            <p>U.S. Patented DMIT Test for children is a very popular option for kids. Childhood: For any person, the years between 6 and 12 years are critical. Since about 90% of brain development is completed before a person reaches this stage, it is important that parents, teachers, and students work together to regulate a child's growth during that important period.
+
+                To succeed in primary and secondary school, children struggle to select the appropriate board (CBSE, ICSE, IGCSE, I.B., or State Board) as education becomes more competitive. Parents have a great deal of faith in the educational system to look for their kids. Biometric analysis is used in Brainwonders' U.S. Patented DMIT Test to assess a child's inborn profile and the most appropriate nurturing method for their growth.</p>
+        </div>
+        <div class="image-section">
+            <img src="teen.webp" alt="About DMIT">
+        </div>
+    </section>
+    
+    
+    
+    <section id="process" class="container">
+        <div class="text-section">
+            <h1>DMIT Test for Teenagers in Pune            </h1>
+            <p>Education and academic development cater to a big part of any human life. Here, one develops both personally and professionally. Although a student's life has many pivotal periods, high school, particularly the 8th or 10th standard, is clearly where things really take a turn for the worse. The child's body is developing naturally at this age, and they are getting closer to cognitive maturity. Thus, for students, the early adolescent years are a decisive time.
+
+                Many students and parents seek personality assessments and career counselling as decisions made during this stage have lifelong impacts. U.S. Patented DMIT Test by Brainwonders is beneficial for high school students in the 8th, 9th, and 10th standards from different education boards. This test helps in careers based on a child's innate strengths, traits, and learning styles, facilitating personal, social, and professional development.</p>
+        </div>
+        <div class="image-section">
+            <img src="teeen.webp" alt="DMIT Process">
+        </div>
+    </section>
+    
+    <section id="contact" class="container">
+        <div class="image-section">
+            <img src="adult.webp" alt="Contact Us">
+        </div>
+        <div class="text-section">
+            <h1>DMIT Test for Adults in Pune</h1>
+            <p>U.S. Patented DMIT Test for adults is important. The age of 25 and up marks the beginning of adulthood, which also includes middle and old age as well. It is reasonable to assume that an adult has journeyed for at least 30% of their lives. There are many opportunities and responsibilities that come with being an adult. It is important to remember that nobody has to make decisions or bear the responsibility for them. Therefore, by understanding and utilising your innate qualities, the Brainwonders U.S. Patented DMIT Test assists one in anticipating and achieving the next milestone or milestones:
+
+                Identify your key strengths- and learn how to use them right!
+                Stop wondering about your limitations; know how to smooth them over.
+                Your personal characteristics define who you are - find the environment that compliments it.
+                Explore your analytical and creative mind.
+                Learn all about how your characteristics work for you- and for those around you.</p>
+        </div>
+    </section>
 
     <section id="services" class="services">
         <h3>Our Services</h3>
@@ -327,21 +428,31 @@
             <textarea rows="5" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
+        
     </section>
+    
     <a href="https://wa.me/+919067111912" class="whatsapp-button" >
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon"> Connect with us on WhatsApp
     </a>
     <footer>
-        &copy; 2025 AVION KYB HUB. All rights reserved.
+        
+            <div class="social-icons">
+                <a href="https://www.instagram.com/avionkybhub/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+            </div>
+            &copy; 2025 AVION KYB HUB. All rights reserved.
     </footer>
 
-    <script>
+    <script> 
         document.querySelector('form').addEventListener('submit', function (e) {
             e.preventDefault();
             alert('Thank you for reaching out to us! We will get back to you soon.');
             this.reset();
         });
     </script>
-        
 </body>
 </html>
